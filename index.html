@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fff9c4, #fffde7);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #fbc02d;
+      color: #222;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px;
+      border: 5px solid #fbc02d;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      color: #fbc02d;
+      margin: 20px 0 10px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #fbc02d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #fbc02d;
+      color: #222;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+    <p>Welcome to my personal space on the web</p>
+  </header>
+
+  <div class="container">
+    <img src="your-photo.jpg" alt="Profile Picture" class="profile-pic">
+    <h2>Hello, I'm [Your Name]</h2>
+    <p>
+      I’m passionate about <strong>[your passion or field]</strong>.  
+      I enjoy working on <strong>[your hobbies/projects]</strong>, and I’m always curious to learn new things.  
+    </p>
+
+    <h2>Background</h2>
+    <p>
+      I studied <strong>[your education/field]</strong> and have experience in <strong>[your work/skills]</strong>.  
+      Over the years, I’ve developed skills in [list a few skills].
+    </p>
+
+    <h2>Hobbies & Interests</h2>
+    <p>
+      In my free time, I love [hobby 1], [hobby 2], and exploring [interest].  
+      I also enjoy connecting with people and sharing ideas.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Reach me at: <a href="mailto:yourname@email.com">
+      yourname@email.com</a>
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+  </footer>
+</body>
+</html>
