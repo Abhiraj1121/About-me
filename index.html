@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
+  <title>About Me • Abhi Raj Singh</title>
   <style>
     * {
       margin: 0;
@@ -12,23 +12,36 @@
     }
 
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #fff9c4, #fffde7);
-      color: #333;
+      font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+      background: linear-gradient(135deg, #a2d2ff, #fef9c3, #bde0fe, #fff7ae);
+      background-size: 400% 400%;
+      animation: gradientShift 14s ease infinite;
+      color: #222;
       line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     header {
-      background: #fbc02d;
-      color: #222;
-      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #003366;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      padding: 70px 20px;
+      backdrop-filter: blur(15px);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+      animation: slideDown 1.2s ease-in-out;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
+      font-weight: 700;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     header p {
@@ -37,72 +50,136 @@
     }
 
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      animation: fadeIn 1s ease-in;
+      max-width: 950px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 18px;
+      box-shadow: 0 8px 35px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(12px);
+      animation: fadeUp 1.5s ease;
     }
 
+    /* Profile Photo Animation */
     .profile-pic {
-      width: 160px;
-      height: 160px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      margin: 0 auto 20px;
-      border: 5px solid #fbc02d;
-      transition: transform 0.3s ease;
+      margin: 0 auto 25px;
+      border: 6px solid transparent;
+      background: linear-gradient(135deg, #0077b6, #ffeb3b);
+      background-clip: padding-box;
+      position: relative;
+      animation: float 4s ease-in-out infinite;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .profile-pic::after {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,235,59,0.4), rgba(0,119,182,0.1));
+      filter: blur(15px);
+      z-index: -1;
+      animation: glowPulse 2.5s infinite alternate;
     }
 
     .profile-pic:hover {
-      transform: scale(1.05);
+      transform: scale(1.08) rotate(3deg);
+      box-shadow: 0 0 30px rgba(0, 119, 182, 0.3);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes glowPulse {
+      0% { opacity: 0.6; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.1); }
     }
 
     h2 {
-      color: #fbc02d;
-      margin: 20px 0 10px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
+      color: #0077b6;
+      margin: 25px 0 12px;
+      font-size: 1.6rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #0077b6, #ffeb3b);
+      border-radius: 2px;
+      animation: expandLine 1.5s ease-out;
     }
 
     p {
       margin-bottom: 15px;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    strong {
+      color: #0077b6;
     }
 
     a {
-      color: #fbc02d;
+      color: #0077b6;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: #ffb703;
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background: #fbc02d;
-      color: #222;
-      margin-top: 40px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.25);
+      color: #003366;
       font-weight: bold;
+      backdrop-filter: blur(10px);
+      border-top: 2px solid rgba(255,255,255,0.4);
+      animation: fadeUp 1.2s ease-in-out;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+    /* Keyframe Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes expandLine {
+      from { width: 0; opacity: 0; }
+      to { width: 60px; opacity: 1; }
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
       }
       .container {
-        margin: 20px;
-        padding: 20px;
+        margin: 25px;
+        padding: 25px;
       }
     }
   </style>
@@ -110,37 +187,37 @@
 <body>
   <header>
     <h1>About Me</h1>
-    <p>Welcome to my personal space on the web</p>
+    <p>Welcome to my bright and creative world 🌞</p>
   </header>
 
   <div class="container">
     <img src="photo.jpg" alt="Profile Picture" class="profile-pic">
-    <h2>Hello, I'm Abhi Raj Singh</h2>
-    <p>  
-      I enjoy working on <strong>GitHub and V.S.Code</strong>, and I’m always curious to learn new things.  
+    <h2>Hello, I'm Abhi Raj Singh 👋</h2>
+    <p>
+      I’m passionate about <strong>technology</strong>, <strong>creativity</strong>, and <strong>innovation</strong>.  
+      I love experimenting with code on <strong>GitHub</strong> and <strong>VS Code</strong>, building ideas that make life easier and smarter.
     </p>
 
     <h2>Background</h2>
     <p>
-      I am studying in <strong>Guru Gobind Singh Public School</strong> and have experience in <strong>Coding</strong>.  
-      Over the years, I’ve developed skills in Python and JavaScript.
+      I study at <strong>Guru Gobind Singh Public School</strong> and have hands-on experience in <strong>Python</strong> and <strong>JavaScript</strong>.  
+      I enjoy solving problems, learning new concepts, and exploring the digital world.
     </p>
 
     <h2>Hobbies & Interests</h2>
     <p>
-      In my free time, I love Books reading, Playing video games, and exploring the world of science and cs.  
-      I also enjoy connecting with people and sharing ideas.
+      Outside coding, I like reading books, playing games, and diving into science and computer concepts.  
+      I’m always eager to learn, grow, and share creative ideas with others.
     </p>
 
     <h2>Contact</h2>
     <p>
-      Reach me at: <a href="mailto:as0428543@gmail.com">
-      as0428543@gmail.com</a>
+      📧 Reach me at: <a href="mailto:as0428543@gmail.com">as0428543@gmail.com</a>
     </p>
   </div>
 
   <footer>
-    <p>&copy; 2025 Abhi Raj Singh. All rights reserved.</p>
+    <p>&copy; 2025 Abhi Raj Singh • Designed with 💙 & ☀️</p>
   </footer>
 </body>
 </html>
