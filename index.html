@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abhi Raj Singh • Portfolio</title>
-
+  <link rel="icon" type="image/png" sizes="32x32" href="about.png">
+  <link rel="apple-touch-icon" href="about.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet"/>
 
@@ -160,33 +161,50 @@
       overflow: hidden;
     }
 
+    .card.featured {
+      border-color: #ff70a6;
+      box-shadow: 0 0 40px rgba(255, 112, 166, 0.25);
+      transform: scale(1.03);
+    }
+
     .card:hover {
-      transform: translateY(-12px);
+      transform: translateY(-12px) scale(1.02);
       border-color: #64dfdf;
-      box-shadow: 0 20px 50px rgba(100, 223, 223, 0.18);
+      box-shadow: 0 20px 50px rgba(100, 223, 223, 0.28);
     }
 
     .card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
       color: #64dfdf;
     }
 
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #ff70a6;
+      color: #0d0d1a;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 30px;
+      margin: 0 6px 12px 0;
+    }
+
     .card p {
-      opacity: 0.85;
-      margin-bottom: 1.5rem;
+      opacity: 0.9;
+      margin-bottom: 1.2rem;
     }
 
     .tech-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
-      margin-top: 1.2rem;
+      margin-top: 1rem;
     }
 
     .tag {
       padding: 6px 14px;
-      background: rgba(94,96,206,0.15);
+      background: rgba(94,96,206,0.18);
       border-radius: 30px;
       font-size: 0.9rem;
       color: #a5d8ff;
@@ -236,11 +254,11 @@
   <header>
     <div class="hero-content">
       <h1 class="hero-title">Abhi Raj Singh</h1>
-      <p class="hero-subtitle">Student • Developer • Problem Solver</p>
+      <p class="hero-subtitle">Student • Developer • AI Enthusiast</p>
 
       <div class="cta-buttons">
         <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-rocket"></i> View Projects
+          <i class="fas fa-rocket"></i> Explore Projects
         </a>
         <a href="mailto:as0428543@gmail.com" class="btn btn-outline">
           <i class="fas fa-envelope"></i> Get in Touch
@@ -255,20 +273,21 @@
       <div class="card">
         <h3>Who I Am</h3>
         <p>
-          Passionate high-school student and self-taught developer from Dhanbad.<br><br>
-          I love turning ideas into code, solving real problems, and constantly learning new technologies.
+          Passionate student and developer from Bokaro, Jharkhand.<br><br>
+          I love building intelligent applications, solving problems with code, and pushing boundaries with AI.
         </p>
       </div>
 
       <div class="card">
         <h3>What I Do</h3>
         <p>
-          Build web applications • Experiment with Python automation • Create small tools & games • Learn system design & algorithms.
+          Create AI-powered tools • Build web apps • Automate tasks with Python • Experiment with modern APIs and front-end tech.
         </p>
         <div class="tech-tags">
           <span class="tag">Python</span>
           <span class="tag">JavaScript</span>
           <span class="tag">HTML/CSS</span>
+          <span class="tag">AI APIs</span>
           <span class="tag">Git</span>
         </div>
       </div>
@@ -276,7 +295,7 @@
       <div class="card">
         <h3>Currently Exploring</h3>
         <p>
-          Web3 basics • Game development with Python • Better UI/UX design • Competitive programming.
+          Advanced chatbot architectures • OpenRouter & LLM integrations • Full-stack AI applications • Competitive programming.
         </p>
       </div>
     </div>
@@ -285,10 +304,32 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
-      <!-- Replace with your real projects -->
+
+      <!-- Featured Project - Swastik AI Chatbot (at the top) -->
+      <div class="card featured">
+        <h3>Swastik AI Chatbot</h3>
+        <div>
+          <span class="badge">1st Rank - School Exhibition</span>
+          <span class="badge">Selected for State Level</span>
+        </div>
+        <p>
+          An intelligent conversational AI chatbot built from scratch using <strong>OpenRouter API</strong>.<br><br>
+          Features natural language understanding, multi-turn conversations, helpful responses, and a clean interface.<br><br>
+          Won <b>first place</b> in the school science & tech exhibition and got selected to represent the school at the state level — a proud milestone!
+        </p>
+        <div class="tech-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">Python (backend)</span>
+          <span class="tag">OpenRouter API</span>
+          <span class="tag">AI / LLM</span>
+        </div>
+      </div>
+
+      <!-- Other projects below -->
       <div class="card">
-        <h3>TaskFlow – To-Do & Pomodoro</h3>
-        <p>Minimalist productivity web app with Pomodoro timer, task categories and local storage.</p>
+        <h3>TaskFlow – Productivity App</h3>
+        <p>Minimalist to-do list + Pomodoro timer with local storage and clean UI.</p>
         <div class="tech-tags">
           <span class="tag">HTML • CSS • JS</span>
           <span class="tag">LocalStorage</span>
@@ -297,43 +338,35 @@
 
       <div class="card">
         <h3>Weather Dashboard</h3>
-        <p>Real-time weather app with 7-day forecast (using free API).</p>
+        <p>Real-time weather info & forecast using free weather API.</p>
         <div class="tech-tags">
           <span class="tag">JavaScript</span>
-          <span class="tag">API</span>
-          <span class="tag">Responsive</span>
+          <span class="tag">API Integration</span>
+          <span class="tag">Responsive Design</span>
         </div>
       </div>
 
       <div class="card">
-        <h3>Python Automation Scripts</h3>
-        <p>Collection of useful scripts: PDF merger, YouTube downloader, file organizer, etc.</p>
+        <h3>Python Automation Suite</h3>
+        <p>Collection of handy scripts: file organizer, PDF tools, web scrapers, etc.</p>
         <div class="tech-tags">
           <span class="tag">Python</span>
           <span class="tag">Automation</span>
+          <span class="tag">Scripting</span>
         </div>
       </div>
 
-      <div class="card">
-        <h3>Personal Portfolio (this one!)</h3>
-        <p>Interactive landing page with glassmorphism and animated background.</p>
-        <div class="tech-tags">
-          <span class="tag">HTML • CSS</span>
-          <span class="tag">Modern CSS</span>
-        </div>
-      </div>
     </div>
   </section>
 
   <footer>
     <div class="social-links">
-      <a href="https://github.com/YOUR_USERNAME" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/Abhiraj1121" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
       <a href="mailto:as0428543@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
       <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
     </div>
 
-    <p>© <script>document.write(new Date().getFullYear())</script> Abhi Raj Singh • Built with curiosity</p>
+    <p>© <script>document.write(new Date().getFullYear())</script> Abhi Raj Singh • All Rights Reserved</p>
   </footer>
 
 </body>
