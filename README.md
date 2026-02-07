@@ -30,9 +30,7 @@
 
 ### Swastik – AI Chatbot
 
-<div align="center">
-  <img src="https://via.placeholder.com/800x400/1e1e3f/64dfdf?text=Swastik+AI+Chatbot+Screenshot" alt="Swastik AI Chatbot" width="80%" style="border-radius:12px; box-shadow: 0 8px 32px rgba(100,223,223,0.3);">
-</div>
+
 
 <br>
 
