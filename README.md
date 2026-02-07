@@ -84,8 +84,6 @@
     <img src="https://img.shields.io/badge/GitHub-@YOUR_USERNAME-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
 
-  <!-- Add LinkedIn / Twitter / others when you have them -->
-
 </div>
 
 <br><br>
