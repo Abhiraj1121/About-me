@@ -52,7 +52,7 @@
 | 3 | **Weather Dashboard** | Real-time weather & 7-day forecast | JavaScript, Weather API | Live |
 | 4 | **Python Automation Suite** | File organizer, PDF tools, web scrapers, etc. | Python, Automation scripts | Ongoing |
 
-→ [View all projects →](https://github.com/YOUR_USERNAME?tab=repositories)
+→ [View all projects →](#)
 
 <br>
 
