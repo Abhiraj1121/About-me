@@ -8,14 +8,12 @@
   <link rel="apple-touch-icon" href="about.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet"/>
-
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: #0a0a15;
@@ -25,7 +23,6 @@
       line-height: 1.6;
       position: relative;
     }
-
     .bg-animation {
       position: fixed;
       inset: 0;
@@ -33,7 +30,6 @@
       pointer-events: none;
       overflow: hidden;
     }
-
     .bg-gradient {
       position: absolute;
       inset: 0;
@@ -42,13 +38,11 @@
       animation: gradientShift 28s ease infinite;
       opacity: 0.7;
     }
-
     @keyframes gradientShift {
-      0%   { background-position: 0% 50%; }
-      50%  { background-position: 100% 50%; }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
     .orb {
       position: absolute;
       border-radius: 50%;
@@ -57,19 +51,16 @@
       animation: floatOrb linear infinite;
       opacity: 0.25;
     }
-
     .orb-1 { width: 420px; height: 420px; top: -15%; left: -10%; animation-duration: 45s; animation-delay: 0s; }
-    .orb-2 { width: 380px; height: 380px; bottom: -12%; right: -8%;  animation-duration: 52s; animation-delay: 8s; background: radial-gradient(circle at 40% 60%, rgba(255, 112, 166, 0.8), rgba(94, 96, 206, 0.3), transparent 70%); }
+    .orb-2 { width: 380px; height: 380px; bottom: -12%; right: -8%; animation-duration: 52s; animation-delay: 8s; background: radial-gradient(circle at 40% 60%, rgba(255, 112, 166, 0.8), rgba(94, 96, 206, 0.3), transparent 70%); }
     .orb-3 { width: 300px; height: 300px; top: 40%; left: 65%; animation-duration: 38s; animation-delay: 15s; opacity: 0.18; }
-
     @keyframes floatOrb {
-      0%   { transform: translate(0, 0) rotate(0deg); }
-      25%  { transform: translate(80px, -60px) rotate(5deg); }
-      50%  { transform: translate(40px, 100px) rotate(-3deg); }
-      75%  { transform: translate(-60px, 30px) rotate(4deg); }
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(80px, -60px) rotate(5deg); }
+      50% { transform: translate(40px, 100px) rotate(-3deg); }
+      75% { transform: translate(-60px, 30px) rotate(4deg); }
       100% { transform: translate(0, 0) rotate(0deg); }
     }
-
     header {
       min-height: 100vh;
       display: flex;
@@ -80,7 +71,6 @@
       position: relative;
       z-index: 1;
     }
-
     .hero-content {
       max-width: 960px;
       width: 100%;
@@ -88,7 +78,6 @@
       flex-direction: column;
       align-items: center;
     }
-
     /* Floating profile photo */
     .profile-container {
       position: relative;
@@ -97,7 +86,6 @@
       margin-bottom: 2.5rem;
       animation: floatProfile 6s ease-in-out infinite;
     }
-
     .profile-photo {
       width: 100%;
       height: 100%;
@@ -109,24 +97,20 @@
       backdrop-filter: blur(4px);
       transition: all 0.4s ease;
     }
-
     .profile-container:hover .profile-photo {
       transform: scale(1.08);
       border-color: #64dfdf;
       box-shadow: 0 0 60px rgba(100, 223, 223, 0.7);
     }
-
     @keyframes floatProfile {
       0%, 100% { transform: translateY(0); }
-      50%      { transform: translateY(-18px); }
+      50% { transform: translateY(-18px); }
     }
-
     .hero-title-wrapper {
       position: relative;
       min-height: 1.5em;
       margin-bottom: 1.2rem;
     }
-
     .hero-title {
       font-family: 'Orbitron', monospace;
       font-size: clamp(2.6rem, 9vw, 6.8rem);
@@ -141,7 +125,6 @@
       word-break: break-word;
       line-height: 1.18;
     }
-
     .cursor {
       display: inline-block;
       width: 4px;
@@ -151,25 +134,21 @@
       margin-left: 4px;
       animation: blink 1s step-end infinite;
     }
-
     @keyframes blink {
       50% { opacity: 0; }
     }
-
     .hero-subtitle {
       font-size: clamp(1.2rem, 4.2vw, 1.7rem);
       opacity: 0.9;
       margin-bottom: 2.8rem;
       font-weight: 300;
     }
-
     .cta-buttons {
       display: flex;
       gap: 1.4rem;
       justify-content: center;
       flex-wrap: wrap;
     }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -182,27 +161,22 @@
       transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1);
       z-index: 2;
     }
-
     .btn-primary {
       background: linear-gradient(90deg, #5e60ce, #64dfdf);
       color: #0d0d1a;
       box-shadow: 0 8px 25px rgba(94,96,206,0.35);
     }
-
     .btn-outline {
       border: 1.5px solid #64dfdf;
       color: #64dfdf;
     }
-
     .btn:hover {
       transform: translateY(-5px);
       box-shadow: 0 18px 40px rgba(100,220,255,0.45);
     }
-
     .btn-outline:hover {
       background: rgba(100,223,223,0.15);
     }
-
     section {
       padding: 100px 16px;
       max-width: 1200px;
@@ -210,7 +184,6 @@
       position: relative;
       z-index: 1;
     }
-
     h2 {
       font-family: 'Orbitron', monospace;
       font-size: clamp(2.4rem, 6vw, 3.2rem);
@@ -221,13 +194,11 @@
       background-clip: text;
       color: transparent;
     }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1.8rem;
     }
-
     .card {
       background: rgba(20, 20, 40, 0.72);
       backdrop-filter: blur(12px);
@@ -241,29 +212,24 @@
       position: relative;
       overflow: hidden;
     }
-
     .card.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     .card.featured {
       border-color: #ff70a6;
       box-shadow: 0 0 40px rgba(255, 112, 166, 0.3);
     }
-
     .card:hover {
       transform: translateY(-14px);
       border-color: #64dfdf;
       box-shadow: 0 24px 55px rgba(100, 223, 223, 0.38);
     }
-
     .card h3 {
       font-size: 1.55rem;
       margin-bottom: 0.9rem;
       color: #64dfdf;
     }
-
     .badge {
       display: inline-block;
       padding: 6px 14px;
@@ -274,26 +240,70 @@
       border-radius: 30px;
       margin: 0 6px 12px 0;
     }
-
     .card p {
       opacity: 0.9;
       margin-bottom: 1.3rem;
       font-size: 0.97rem;
     }
-
     .tech-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
       margin-top: 1rem;
     }
-
     .tag {
       padding: 6px 14px;
       background: rgba(94,96,206,0.2);
       border-radius: 30px;
       font-size: 0.88rem;
       color: #a5d8ff;
+    }
+
+    /* === Certificate Styles (Added) === */
+    .cert-card {
+      background: rgba(20, 20, 40, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(100, 223, 223, 0.25);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.85s cubic-bezier(0.23, 1, 0.32, 1);
+      opacity: 0;
+      transform: translateY(80px);
+      will-change: transform, opacity;
+    }
+    .cert-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .cert-card:hover {
+      transform: translateY(-14px);
+      border-color: #64dfdf;
+      box-shadow: 0 24px 55px rgba(100, 223, 223, 0.38);
+    }
+    .cert-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .cert-card:hover .cert-image {
+      transform: scale(1.04);
+    }
+    .cert-info {
+      padding: 1.6rem;
+      text-align: center;
+    }
+    .cert-info h3 {
+      color: #64dfdf;
+      margin-bottom: 0.5rem;
+    }
+    .cert-info p {
+      color: #a5d8ff;
+      margin-bottom: 0.4rem;
+    }
+    .cert-source {
+      font-size: 0.9rem;
+      color: #64dfdf;
     }
 
     footer {
@@ -304,25 +314,21 @@
       position: relative;
       z-index: 1;
     }
-
     .social-links {
       margin: 2rem 0;
       display: flex;
       justify-content: center;
       gap: 1.8rem;
     }
-
     .social-icon {
       font-size: 1.8rem;
       color: #a5d8ff;
       transition: all 0.35s ease;
     }
-
     .social-icon:hover {
       color: #64dfdf;
       transform: translateY(-6px) scale(1.15);
     }
-
     @media (max-width: 640px) {
       .profile-container {
         width: 140px;
@@ -353,31 +359,22 @@
   </style>
 </head>
 <body>
-
   <div class="bg-animation">
     <div class="bg-gradient"></div>
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
   </div>
-
   <header>
     <div class="hero-content">
-      <!-- Floating profile photo -->
       <div class="profile-container">
-        <img 
-          src="photo.jpg" 
-          alt="Abhi Raj Singh" 
-          class="profile-photo"
-        >
+        <img src="photo.jpg" alt="Abhi Raj Singh" class="profile-photo">
       </div>
-
       <div class="hero-title-wrapper">
         <div class="hero-title" id="typingText"></div>
         <span class="cursor" id="cursor"></span>
       </div>
       <p class="hero-subtitle">Student • Developer • AI Enthusiast</p>
-
       <div class="cta-buttons">
         <a href="#projects" class="btn btn-primary">
           <i class="fas fa-rocket"></i> Explore Projects
@@ -399,7 +396,6 @@
           I love building intelligent applications, solving problems with code, and pushing boundaries with AI.
         </p>
       </div>
-
       <div class="card">
         <h3>What I Do</h3>
         <p>
@@ -413,7 +409,6 @@
           <span class="tag">Git</span>
         </div>
       </div>
-
       <div class="card">
         <h3>Currently Exploring</h3>
         <p>
@@ -423,10 +418,33 @@
     </div>
   </section>
 
+  <!-- Certifications Section (Added Above Projects) -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="grid">
+      <div class="cert-card">
+        <img src="python_Certificate.jpg" alt="Python (Basic) Certificate" class="cert-image">
+        <div class="cert-info">
+          <h3>Python (Basic)</h3>
+          <p>HackerRank Skill Certification</p>
+          <p class="cert-source">Earned on: 13 May, 2026</p>
+        </div>
+      </div>
+
+      <div class="cert-card">
+        <img src="SQL_Certificate.jpg" alt="SQL (Basic) Certificate" class="cert-image">
+        <div class="cert-info">
+          <h3>SQL (Basic)</h3>
+          <p>HackerRank Skill Certification</p>
+          <p class="cert-source">Earned on: 13 May, 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
-
       <div class="card featured">
         <h3>Swastik AI Chatbot</h3>
         <div>
@@ -446,7 +464,6 @@
           <span class="tag">AI / LLM</span>
         </div>
       </div>
-
       <div class="card">
         <h3>TaskFlow – Productivity App</h3>
         <p>Minimalist to-do list + Pomodoro timer with local storage and clean UI.</p>
@@ -455,7 +472,6 @@
           <span class="tag">LocalStorage</span>
         </div>
       </div>
-
       <div class="card">
         <h3>Weather Dashboard</h3>
         <p>Real-time weather info & forecast using free weather API.</p>
@@ -465,7 +481,6 @@
           <span class="tag">Responsive Design</span>
         </div>
       </div>
-
       <div class="card">
         <h3>Python Automation Suite</h3>
         <p>Collection of handy scripts: file organizer, PDF tools, web scrapers, etc.</p>
@@ -475,7 +490,6 @@
           <span class="tag">Scripting</span>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -485,34 +499,28 @@
       <a href="mailto:abhirajsinghrajputgamer76@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
       <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
     </div>
-
     <p>© <script>document.write(new Date().getFullYear())</script> Abhi Raj Singh • All Rights Reserved</p>
   </footer>
 
   <script>
-    // Typing cycle: "About" → erase → "Abhi Raj Singh" → erase → repeat
+    // Typing cycle
     const texts = ["About", "Abhi Raj Singh"];
     const typingElement = document.getElementById("typingText");
     const cursorElement = document.getElementById("cursor");
-
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-
-    const typeSpeed   = 100;
+    const typeSpeed = 100;
     const deleteSpeed = 60;
-    const pauseAfter  = 1800;
-
+    const pauseAfter = 1800;
     function typeCycle() {
       const current = texts[textIndex];
-
       if (!isDeleting && charIndex <= current.length) {
         typingElement.textContent = current.substring(0, charIndex);
         charIndex++;
         setTimeout(typeCycle, typeSpeed);
         return;
       }
-
       if (!isDeleting && charIndex > current.length) {
         setTimeout(() => {
           isDeleting = true;
@@ -520,26 +528,22 @@
         }, pauseAfter);
         return;
       }
-
       if (isDeleting && charIndex > 0) {
         charIndex--;
         typingElement.textContent = current.substring(0, charIndex);
         setTimeout(typeCycle, deleteSpeed);
         return;
       }
-
       if (isDeleting && charIndex === 0) {
         isDeleting = false;
         textIndex = (textIndex + 1) % texts.length;
         setTimeout(typeCycle, 700);
       }
     }
-
     typeCycle();
 
-    // Card scroll animation
-    const cards = document.querySelectorAll('.card');
-
+    // Card scroll animation (Updated to include certificates)
+    const cards = document.querySelectorAll('.card, .cert-card');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
@@ -554,9 +558,7 @@
       threshold: 0.12,
       rootMargin: "0px 0px -100px 0px"
     });
-
     cards.forEach(card => observer.observe(card));
   </script>
-
 </body>
 </html>
