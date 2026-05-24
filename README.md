@@ -79,7 +79,7 @@
   </a>
   
   <a href="https://github.com/Abhiraj1121">
-    <img src="https://img.shields.io/badge/GitHub-@YOUR_USERNAME-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    <img src="https://img.shields.io/badge/GitHub-@Abhiraj1121-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
 
 </div>
