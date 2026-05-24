@@ -78,7 +78,7 @@
     <img src="https://img.shields.io/badge/Gmail-as0428543@gmail.com-red?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
   </a>
   
-  <a href="https://github.com/YOUR_GITHUB_USERNAME">
+  <a href="https://github.com/Abhiraj1121">
     <img src="https://img.shields.io/badge/GitHub-@YOUR_USERNAME-black?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
 
