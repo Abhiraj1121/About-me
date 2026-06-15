@@ -177,6 +177,83 @@
     .btn-outline:hover {
       background: rgba(100,223,223,0.15);
     }
+
+    /* === New Project CTA (Added) === */
+    .new-project-wrapper {
+      margin-top: 1.6rem;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: ctaReveal 0.9s cubic-bezier(0.23,1,0.32,1) 1.1s forwards;
+    }
+    @keyframes ctaReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn-new-project {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      color: #0d0d1a;
+      background: linear-gradient(90deg, #5e60ce, #64dfdf, #ff70a6, #5e60ce);
+      background-size: 300% 100%;
+      animation: btnGradientFlow 8s ease infinite, btnGlowPulse 3.2s ease-in-out infinite;
+    }
+    .btn-new-project:hover {
+      background-position: 100% 0;
+      transform: translateY(-6px) scale(1.045);
+      box-shadow: 0 20px 50px rgba(100,223,223,0.55);
+    }
+    @keyframes btnGradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes btnGlowPulse {
+      0%, 100% { box-shadow: 0 8px 25px rgba(94,96,206,0.35); }
+      50% { box-shadow: 0 10px 42px rgba(100,223,223,0.55); }
+    }
+    .btn-new-project::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.55), transparent);
+      transform: skewX(-20deg);
+      transition: left 0.7s ease;
+      z-index: 1;
+    }
+    .btn-new-project:hover::before {
+      left: 125%;
+    }
+    .btn-new-project i,
+    .btn-new-project span.label {
+      position: relative;
+      z-index: 2;
+    }
+    .new-badge {
+      position: absolute;
+      top: -12px;
+      right: -14px;
+      background: #ff70a6;
+      color: #1a0d14;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 3px 9px;
+      border-radius: 30px;
+      box-shadow: 0 0 14px rgba(255,112,166,0.75);
+      animation: badgePulse 2.4s ease-in-out infinite;
+      z-index: 3;
+    }
+    @keyframes badgePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.18); }
+    }
+
     section {
       padding: 100px 16px;
       max-width: 1200px;
@@ -355,6 +432,15 @@
       .card {
         padding: 1.5rem;
       }
+      .new-project-wrapper {
+        margin-top: 1.2rem;
+      }
+      .new-badge {
+        top: -10px;
+        right: -8px;
+        font-size: 0.58rem;
+        padding: 2px 7px;
+      }
     }
   </style>
 </head>
@@ -381,6 +467,14 @@
         </a>
         <a href="mailto:abhirajsinghrajputgamer76@gmail.com" class="btn btn-outline">
           <i class="fas fa-envelope"></i> Get in Touch
+        </a>
+      </div>
+      <!-- New Project CTA (Added) -->
+      <div class="new-project-wrapper">
+        <a href="https://abhiraj1121.github.io/eka/" target="_blank" rel="noopener noreferrer" class="btn btn-new-project">
+          <i class="fas fa-layer-group"></i>
+          <span class="label">New Project</span>
+          <span class="new-badge">NEW</span>
         </a>
       </div>
     </div>
